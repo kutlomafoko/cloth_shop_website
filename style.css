@@ -327,11 +327,25 @@ header .brand {
     align-items: center;
 }
 
+/* CIRCULAR SPINNING LOGO */
+
 header .brand img.logo {
-    width: 75px;
+    width: 60px;
     height: 60px;
+    border-radius: 50%;
+    border: 2px solid #b8863b;
     object-fit: contain;
-    display: block;
+    background: #050505;
+    animation: logoSpin 5s linear infinite;
+}
+
+@keyframes logoSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .product img,
 .product video {
