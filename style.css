@@ -27,10 +27,44 @@ header {
     gap: 15px;
 }
 
-.logo {
-    color: #d4af75;
-    letter-spacing: 3px;
-    font-size: 23px;
+header {
+    background: #050505;
+    padding: 8px 0;
+    border-bottom: 1px solid #b8863b;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header .brand img {
+    width: 65px;
+    height: 48px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+header .container.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+    gap: 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+@media (max-width: 600px) {
+    header .brand img {
+        width: 52px;
+        height: 42px;
+    }
 }
 
 nav {
