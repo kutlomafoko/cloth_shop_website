@@ -335,10 +335,11 @@ header .brand img.logo {
 }
 .product video {
     width: 100%;
+    max-width: 245px;
     height: 280px;
     object-fit: cover;
     display: block;
-    z-index: 1;
+    margin: 0 auto;
 }
 
 .product {
