@@ -333,3 +333,14 @@ header .brand img.logo {
     object-fit: contain;
     display: block;
 }
+.tile video {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    display: block;
+}
+
+.tile {
+    position: relative;
+    overflow: hidden;
+}
