@@ -229,8 +229,8 @@ nav a.active {
 /* ABOUT PAGE CIRCULAR FLIPPING LOGO */
 
 .about-section img {
-    width: 160px;
-    height: 160px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     border: 3px solid #b8863b;
     object-fit: contain;
