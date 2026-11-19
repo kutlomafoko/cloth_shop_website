@@ -381,3 +381,24 @@ header .brand img.logo {
     position: relative;
     overflow: hidden;
 }
+/* FLIPPING LOGO ON EVERY PAGE */
+
+header img.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #b8863b;
+    object-fit: contain;
+    background: #050505;
+    animation: logoFlip 4s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes logoFlip {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
