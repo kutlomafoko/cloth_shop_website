@@ -1,0 +1,290 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background-color: #171717;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #d4af75;
+    letter-spacing: 3px;
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d4af75;
+}
+
+/* HOME PAGE HERO */
+
+.hero {
+    min-height: 520px;
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600")
+    center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin: 15px 0;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background-color: #b89460;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #171717;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* PAGE BANNERS */
+
+.page-banner {
+    background-color: #e9dfd1;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-banner h1 {
+    font-size: 40px;
+    color: #29231d;
+    margin-bottom: 10px;
+}
+
+/* PRODUCT CARDS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin-top: 12px;
+    color: #29231d;
+}
+
+.product p {
+    margin: 10px 0;
+}
+
+/* ABOUT PAGE */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 60px 7%;
+}
+
+.about-section h2 {
+    color: #a17a4a;
+    margin: 20px 0 10px;
+}
+
+.about-section img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* GALLERY PAGE */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px 7%;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTACT PAGE */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 7%;
+}
+
+.contact-info h2,
+form h2 {
+    margin-bottom: 20px;
+    color: #a17a4a;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .btn {
+    align-self: flex-start;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .about-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner h1 {
+        font-size: 30px;
+    }
+
+}
