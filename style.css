@@ -335,7 +335,6 @@ header .brand img.logo {
 }
 .product video {
     width: 100%;
-    max-width: 245px;
     height: 280px;
     object-fit: contain;
     display: block;
