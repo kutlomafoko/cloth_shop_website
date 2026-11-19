@@ -322,3 +322,14 @@ footer {
     }
 
 }
+header .brand {
+    display: flex;
+    align-items: center;
+}
+
+header .brand img.logo {
+    width: 65px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
