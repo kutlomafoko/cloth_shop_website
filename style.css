@@ -337,7 +337,7 @@ header .brand img.logo {
     width: 100%;
     max-width: 245px;
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
