@@ -333,7 +333,7 @@ header .brand img.logo {
     object-fit: contain;
     display: block;
 }
-.tile video {
+.product video {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -341,7 +341,7 @@ header .brand img.logo {
     z-index: 1;
 }
 
-.tile {
+.product {
     position: relative;
     overflow: hidden;
 }
