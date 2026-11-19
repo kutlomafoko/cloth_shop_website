@@ -336,15 +336,15 @@ header .brand img.logo {
     border: 2px solid #b8863b;
     object-fit: contain;
     background: #050505;
-    animation: logoSpin 5s linear infinite;
+    animation: logoFlip 4s linear infinite;
 }
 
-@keyframes logoSpin {
+@keyframes logoFlip {
     from {
-        transform: rotate(0deg);
+        transform: rotateY(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotateY(360deg);
     }
 }
 .product img,
