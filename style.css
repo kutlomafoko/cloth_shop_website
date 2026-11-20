@@ -1014,6 +1014,155 @@ header img.logo {
 }
 
 
+/* =================================
+   PROMOTIONS PAGE
+================================= */
+
+/* FASHION SALE BANNER */
+
+.fashion-sale {
+    width: 100%;
+    background: #080808;
+    overflow: hidden;
+}
+
+.fashion-sale-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* MOVING GOLD TAPE */
+
+.moving-tape {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(
+        90deg,
+        #080808,
+        #6f4810,
+        #d6ad60,
+        #6f4810,
+        #080808
+    );
+    border-top: 2px solid #d6ad60;
+    border-bottom: 2px solid #d6ad60;
+    padding: 15px 0;
+}
+
+.tape-track {
+    display: flex;
+    width: max-content;
+    animation: moveTape 22s linear infinite;
+}
+
+.tape-content {
+    display: flex;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.tape-content span {
+    color: #fff0cf;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 0 30px;
+}
+
+@keyframes moveTape {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.moving-tape:hover .tape-track {
+    animation-play-state: paused;
+}
+
+/* PROMOTION HEADING */
+
+.promotion-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.promotion-heading h2 {
+    color: #b8863b;
+    font-size: 32px;
+}
+
+.promotion-heading p {
+    color: #777;
+}
+
+/* PROMOTION PRODUCTS */
+
+.product {
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(184, 134, 59, 0.3);
+}
+
+.product .discount {
+    color: #b8863b;
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* FINAL PROMOTION SECTION */
+
+.promotion-ending {
+    background: #080808;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.promotion-ending h2 {
+    color: #d6ad60;
+}
+
+.promotion-ending p {
+    margin: 15px 0 25px;
+}
+
+.promotion-ending .btn {
+    display: inline-block;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .tape-content span {
+        font-size: 12px;
+        padding: 0 18px;
+    }
+
+    .promotion-heading h2 {
+        font-size: 25px;
+    }
+
+    .product img {
+        height: 220px;
+    }
+}
+
+
+
 
 
 
