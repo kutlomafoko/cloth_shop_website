@@ -665,4 +665,469 @@ header img.logo {
     }
 }
 
+/* =========================================
+   KXTLO BOUTIQUE - BLACK DIAMOND COLLECTIONS
+========================================= */
+
+.collections-page {
+    background: #050505;
+}
+
+/* MAIN SECTION */
+
+.collections-page .black-diamond {
+    background:
+        radial-gradient(ellipse at center, #21170e, #050505 75%);
+    color: white;
+    padding: 40px 2%;
+    overflow: hidden;
+}
+
+/* HEADING */
+
+.collections-page .diamond-heading {
+    text-align: center;
+    position: relative;
+    z-index: 6;
+    margin: 5px auto 15px;
+}
+
+.collections-page .diamond-label {
+    color: #d6a743;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 12px;
+}
+
+.collections-page .diamond-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 70px);
+    font-weight: 400;
+    margin: 8px 0;
+    color: #fff0d8;
+}
+
+.collections-page .diamond-heading h1 span {
+    color: #e1a83f;
+    font-style: italic;
+}
+
+.collections-page .diamond-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #e5d6c1;
+}
+
+.collections-page .diamond-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: 1px solid #d6a743;
+    color: #e8bd69;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.collections-page .diamond-button:hover {
+    background: #d6a743;
+    color: #080808;
+    box-shadow: 0 0 25px #d6a743;
+}
+
+
+/* SCATTERED COLLAGE AREA */
+
+.collections-page .scattered-gallery {
+    position: relative;
+    max-width: 1200px;
+    height: 850px;
+    margin: 0 auto;
+}
+
+
+/* GENERAL IMAGE STYLE */
+
+.collections-page .scatter-item {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    background: #17110b;
+    border: 2px solid #c49a4a;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+    text-decoration: none;
+    transition: transform 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+.collections-page .scatter-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.collections-page .scatter-item:hover {
+    z-index: 15;
+    transform: rotate(0deg) scale(1.06);
+    box-shadow: 0 0 25px rgba(214,167,67,0.75);
+}
+
+.collections-page .scatter-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/* LARGE LEFT PHOTOGRAPH */
+
+.collections-page .casual {
+    width: 30%;
+    height: 420px;
+    top: 0;
+    left: 0;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+
+/* HANDBAG TOP RIGHT */
+
+.collections-page .handbag {
+    width: 25%;
+    height: 290px;
+    top: 10px;
+    right: 1%;
+    transform: rotate(6deg);
+    z-index: 2;
+}
+
+
+/* ACCESSORIES TOP CENTRE */
+
+.collections-page .accessories {
+    width: 22%;
+    height: 145px;
+    top: 35px;
+    left: 39%;
+    transform: rotate(-2deg);
+    z-index: 1;
+}
+
+
+/* ELEGANT MIDDLE */
+
+.collections-page .elegant {
+    width: 31%;
+    height: 370px;
+    top: 300px;
+    left: 28%;
+    transform: rotate(5deg);
+    z-index: 4;
+}
+
+
+/* MODERN RIGHT */
+
+.collections-page .modern {
+    width: 29%;
+    height: 360px;
+    top: 260px;
+    right: 4%;
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+
+/* IMAGE CAPTIONS */
+
+.collections-page .scatter-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 12px 15px;
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.95)
+    );
+}
+
+.collections-page .scatter-caption h3 {
+    color: #e5b85e;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.collections-page .scatter-caption p {
+    color: white;
+    font-size: 11px;
+}
+
+
+/* YOUR STYLE PANEL */
+
+.collections-page .style-panel {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 26%;
+    padding: 20px;
+    background: #080808;
+    border: 1px solid #d6a743;
+    transform: rotate(-5deg);
+    z-index: 7;
+}
+
+.collections-page .style-panel h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d6a743;
+    font-size: 48px;
+    font-style: italic;
+    line-height: 1.1;
+}
+
+.collections-page .style-panel p {
+    color: #eee0c8;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+.collections-page .style-panel span {
+    color: #d6a743;
+    font-size: 10px;
+}
+
+
+/* SHOES BOTTOM LEFT */
+
+.collections-page .shoes {
+    width: 32%;
+    height: 190px;
+    left: 0;
+    bottom: 0;
+    transform: rotate(3deg);
+    z-index: 3;
+}
+
+
+/* CLOTHING RACK BOTTOM CENTRE */
+
+.collections-page .clothing-rack {
+    width: 34%;
+    height: 260px;
+    left: 32%;
+    bottom: 0;
+    transform: rotate(-4deg);
+    z-index: 5;
+}
+
+
+/* CATEGORY SECTION */
+
+.collections-page .category-area {
+    position: absolute;
+    width: 32%;
+    right: 0;
+    bottom: 15px;
+    z-index: 8;
+}
+
+.collections-page .category-heading {
+    text-align: center;
+    color: #d6a743;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.collections-page .category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.collections-page .category-card {
+    min-height: 90px;
+    border: 1px solid #c49a4a;
+    background: rgba(15,12,8,0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.collections-page .category-card span {
+    color: #d6a743;
+    font-size: 28px;
+}
+
+.collections-page .category-card p {
+    color: #f4e6ce;
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.collections-page .category-card:hover {
+    background: #d6a743;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #d6a743;
+}
+
+.collections-page .category-card:hover span,
+.collections-page .category-card:hover p {
+    color: #080808;
+}
+
+
+/* CLOSING MESSAGE */
+
+.collections-page .diamond-footer {
+    text-align: center;
+    padding: 30px 10px;
+    border-top: 1px solid #80602e;
+    margin-top: 20px;
+}
+
+.collections-page .diamond-footer h2 {
+    color: #d6a743;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+}
+
+.collections-page .diamond-footer p {
+    color: #e8dcc7;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+
+/* FOOTER */
+
+.collections-page footer {
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+    .collections-page .black-diamond {
+        padding: 30px 12px;
+    }
+
+    .collections-page .diamond-heading h1 {
+        font-size: 40px;
+    }
+
+    .collections-page .diamond-label {
+        letter-spacing: 2px;
+    }
+
+    .collections-page .scattered-gallery {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 10px 5px;
+    }
+
+    .collections-page .scatter-item {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 45%;
+        height: 240px;
+    }
+
+    .collections-page .casual {
+        transform: rotate(-4deg);
+    }
+
+    .collections-page .handbag {
+        transform: rotate(4deg);
+    }
+
+    .collections-page .accessories {
+        transform: rotate(-3deg);
+    }
+
+    .collections-page .elegant {
+        transform: rotate(3deg);
+    }
+
+    .collections-page .modern {
+        transform: rotate(-3deg);
+    }
+
+    .collections-page .shoes {
+        transform: rotate(3deg);
+    }
+
+    .collections-page .clothing-rack {
+        transform: rotate(-3deg);
+    }
+
+    .collections-page .style-panel,
+    .collections-page .category-area {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 90%;
+        transform: none;
+    }
+
+    .collections-page .style-panel {
+        text-align: center;
+    }
+
+    .collections-page .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .collections-page .category-card {
+        min-height: 80px;
+    }
+
+    .collections-page .diamond-footer h2 {
+        font-size: 25px;
+    }
+
+    .collections-page .scatter-caption h3 {
+        font-size: 14px;
+    }
+
+    .collections-page .scatter-caption p {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .collections-page .scatter-item {
+        height: 190px;
+    }
+
+    .collections-page .category-card p {
+        font-size: 8px;
+    }
+
+}
+
 
