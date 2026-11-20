@@ -291,13 +291,32 @@ form {
     gap: 12px;
 }
 
+
 input,
 textarea {
     padding: 12px;
-    border: 1px solid #171717;
+    border: 1px solid #b8863b;
+    background-color: #17120b;
+    color: #f5e6c8;
     font-family: Arial, sans-serif;
     width: 100%;
+    border-radius: 5px;
+    outline: none;
 }
+
+/* When someone clicks inside an input */
+input:focus,
+textarea:focus {
+    border: 2px solid #d6ad60;
+    box-shadow: 0 0 8px rgba(214, 173, 96, 0.5);
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+    color: #b9a783;
+}
+
 
 textarea {
     resize: vertical;
