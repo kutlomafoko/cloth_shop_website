@@ -885,16 +885,16 @@ header img.logo {
     flex: 0 0 100%;
     box-sizing: border-box;
     background: #111;
-    padding: 25px;
+    padding: 30px;
     border: 1px solid #b8863b;
     border-radius: 12px;
-    min-height: 480px;
+    min-height: 650px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .customer-video {
     width: 100%;
-    height: 230px;
+    height: 350px;
     object-fit: cover;
     border-radius: 8px;
     background: #222;
