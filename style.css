@@ -211,7 +211,7 @@ nav a.active {
 
     /* Background picture */
     background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("jpg");
 
     background-size: cover;
