@@ -531,3 +531,11 @@ header img.logo {
         grid-column: 1 / -1;
     }
 }
+
+.mini-product video {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
