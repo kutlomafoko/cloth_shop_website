@@ -1,18 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | KXTLO BOTIQUE</title>
+    <title>Shop | KXTLO BOUTIQUE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="shop-page">
 
 <header>
-    <a href="shop.html" class="brand">  
-    <img src="Luxurious Gold Crown Hanger Boutique Logo.png" alt="Kxtlo Boutique Logo" class="logo">
+    <a href="shop.html" class="brand">
+        <img src="Luxurious Gold Crown Hanger Boutique Logo.png"
+             alt="KXTLO Boutique Logo" class="logo">
     </a>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,50 +22,447 @@
         <a href="collections.html">Collections</a>
         <a href="gallery.html">Gallery</a>
         <a href="promotions.html">Promotions</a>
-        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="section">
-    <h2>Shop Our Products</h2>
-
-    <div class="products">
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Elegant dress">
-            <h3>Elegant Dress</h3>
-            <p>P350.00</p>
-            <a href="contact.html" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1548624149-f3a1b0b4e9d3?w=600" alt="Women's outfit">
-            <h3>Fashion Outfit</h3>
-            <p>P280.00</p>
-            <a href="contact.html" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600" alt="Fashion shirt">
-            <h3>Classic Shirt</h3>
-            <p>P180.00</p>
-            <a href="contact.html" class="btn">Enquire Now</a>
-        </div>
-
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600" alt="Fashion shoes">
-            <h3>Fashion Shoes</h3>
-            <p>P320.00</p>
-            <a href="contact.html" class="btn">Enquire Now</a>
-        </div>
-
+<!-- FASHION BANNER -->
+<section class="shop-hero">
+    <div class="hero-text">
+        <span>THE KXTLO COLLECTION</span>
+        <h1><em>Shop</em> Our Products</h1>
+        <p>Luxury, beauty and elegance in every outfit.</p>
+        <a href="#collection" class="gold-button">Shop Now →</a>
     </div>
 </section>
 
+<!-- SHOPPING AREA -->
+<main class="shop-layout">
+
+    <!-- LEFT FILTERS -->
+    <aside class="shop-filters">
+        <h3>☷ Filter Products</h3>
+
+        <label for="category">Category</label>
+        <select id="category">
+            <option value="all">All Categories</option>
+            <option value="dresses">Dresses</option>
+            <option value="tops">Tops</option>
+            <option value="trousers">Trousers</option>
+            <option value="shoes">Shoes</option>
+            <option value="bags">Bags</option>
+            <option value="outfits">Outfits</option>
+        </select>
+
+        <label for="shop-search">Search</label>
+        <input type="text" id="shop-search" placeholder="Search outfits...">
+
+        <div class="filter-line"></div>
+
+        <label>Price Range</label>
+        <select id="price-range">
+            <option value="all">All Prices</option>
+            <option value="0-200">P0 – P200</option>
+            <option value="201-400">P201 – P400</option>
+            <option value="401-600">P401 – P600</option>
+            <option value="601-9999">P601+</option>
+        </select>
+
+        <button id="reset-filters" class="filter-button">
+            Apply / Reset Filters
+        </button>
+    </aside>
+
+    <!-- PRODUCTS -->
+    <section class="shop-collection" id="collection">
+
+        <div class="collection-top">
+            <div>
+                <span>OUR FASHION SELECTION</span>
+                <h2>✦ Featured Collection</h2>
+            </div>
+
+            <select id="sort-products" aria-label="Sort products">
+                <option value="popular">Sort by Popularity</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+
+            <article class="boutique-product" data-name="Elegant Evening Dress"
+                data-category="dresses" data-price="350" data-old="400">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500"
+                         alt="Elegant evening dress">
+                    <span class="discount-label">-20%</span>
+                </div>
+                <div class="product-info">
+                    <small>DRESSES</small>
+                    <h3>Elegant Evening Dress</h3>
+                    <p class="price"><del>P400.00</del> P350.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Chic Two Piece Set"
+                data-category="outfits" data-price="280" data-old="330">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1548624149-f3a1b0b4e9d3?w=500"
+                         alt="Chic two piece outfit">
+                    <span class="discount-label">-15%</span>
+                </div>
+                <div class="product-info">
+                    <small>OUTFITS</small>
+                    <h3>Chic Two Piece Set</h3>
+                    <p class="price"><del>P330.00</del> P280.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Stylish Top"
+                data-category="tops" data-price="180" data-old="200">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500"
+                         alt="Stylish ladies top">
+                    <span class="discount-label">-10%</span>
+                </div>
+                <div class="product-info">
+                    <small>TOPS</small>
+                    <h3>Stylish Top</h3>
+                    <p class="price"><del>P200.00</del> P180.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Elegant Heels"
+                data-category="shoes" data-price="320" data-old="380">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500"
+                         alt="Elegant heels">
+                    <span class="discount-label">-15%</span>
+                </div>
+                <div class="product-info">
+                    <small>SHOES</small>
+                    <h3>Elegant Heels</h3>
+                    <p class="price"><del>P380.00</del> P320.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Classic Blue Jeans"
+                data-category="trousers" data-price="250" data-old="280">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500"
+                         alt="Classic blue jeans">
+                    <span class="discount-label">-10%</span>
+                </div>
+                <div class="product-info">
+                    <small>TROUSERS</small>
+                    <h3>Classic Blue Jeans</h3>
+                    <p class="price"><del>P280.00</del> P250.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Luxury Handbag"
+                data-category="bags" data-price="295" data-old="370">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+                         alt="Luxury handbag">
+                    <span class="discount-label">-20%</span>
+                </div>
+                <div class="product-info">
+                    <small>BAGS</small>
+                    <h3>Luxury Handbag</h3>
+                    <p class="price"><del>P370.00</del> P295.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Smart Casual Trousers"
+                data-category="trousers" data-price="230" data-old="260">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500"
+                         alt="Smart casual trousers">
+                    <span class="discount-label">-10%</span>
+                </div>
+                <div class="product-info">
+                    <small>TROUSERS</small>
+                    <h3>Smart Casual Trousers</h3>
+                    <p class="price"><del>P260.00</del> P230.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="boutique-product" data-name="Elegant Ladies Top"
+                data-category="tops" data-price="190" data-old="220">
+                <div class="product-photo">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500"
+                         alt="Elegant ladies top">
+                    <span class="discount-label">-15%</span>
+                </div>
+                <div class="product-info">
+                    <small>TOPS</small>
+                    <h3>Elegant Ladies Top</h3>
+                    <p class="price"><del>P220.00</del> P190.00</p>
+                    <button class="add-to-cart">✦ Add to Cart</button>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="no-products" hidden>No products found. Try another search.</p>
+
+    </section>
+
+    <!-- RIGHT SHOPPING CART -->
+    <aside class="shopping-cart">
+        <h3>🛒 Your Cart (<span id="cart-count">0</span>)</h3>
+
+        <div id="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            <span>Total:</span>
+            <strong id="cart-total">P0.00</strong>
+        </div>
+
+        <button id="checkout" class="checkout-button">
+            Checkout
+        </button>
+
+        <button id="clear-cart" class="clear-button">
+            Clear Cart
+        </button>
+    </aside>
+
+</main>
+
+<!-- BOTTOM INFORMATION STRIP -->
+<section class="shop-benefits">
+    <div>✦ <strong>Premium Quality</strong><small>Always Elegant</small></div>
+    <div>🚚 <strong>Fast Delivery</strong><small>Nationwide</small></div>
+    <div class="benefit-brand">Elegance Is Our Identity.</div>
+    <div>🔒 <strong>Secure Shopping</strong><small>Shop With Confidence</small></div>
+    <div>☎ <strong>24/7 Support</strong><small>We're Here to Help</small></div>
+</section>
+
 <footer>
-    <p>&copy; 2026 Luxe Fashion. All Rights Reserved.</p>
+    <p>&copy; 2026 KXTLO BOUTIQUE. All Rights Reserved.</p>
 </footer>
+
+<script>
+    // PRODUCT FILTERS
+    const productGrid = document.getElementById("product-grid");
+    const category = document.getElementById("category");
+    const search = document.getElementById("shop-search");
+    const priceRange = document.getElementById("price-range");
+    const sort = document.getElementById("sort-products");
+    const noProducts = document.getElementById("no-products");
+
+    function filterProducts() {
+        const selectedCategory = category.value;
+        const searchText = search.value.toLowerCase();
+        const selectedPrice = priceRange.value;
+
+        const cards = [...document.querySelectorAll(".boutique-product")];
+
+        cards.forEach(card => {
+            const matchesCategory =
+                selectedCategory === "all" ||
+                card.dataset.category === selectedCategory;
+
+            const matchesSearch =
+                card.dataset.name.toLowerCase().includes(searchText);
+
+            const price = Number(card.dataset.price);
+            let matchesPrice = true;
+
+            if (selectedPrice !== "all") {
+                const [min, max] = selectedPrice.split("-").map(Number);
+                matchesPrice = price >= min && price <= max;
+            }
+
+            card.hidden = !(matchesCategory && matchesSearch && matchesPrice);
+        });
+
+        noProducts.hidden = cards.some(card => !card.hidden);
+    }
+
+    category.addEventListener("change", filterProducts);
+    search.addEventListener("input", filterProducts);
+    priceRange.addEventListener("change", filterProducts);
+
+    document.getElementById("reset-filters").addEventListener("click", () => {
+        category.value = "all";
+        search.value = "";
+        priceRange.value = "all";
+        sort.value = "popular";
+        filterProducts();
+    });
+
+    sort.addEventListener("change", () => {
+        const cards = [...document.querySelectorAll(".boutique-product")];
+
+        cards.sort((a, b) => {
+            if (sort.value === "low")
+                return Number(a.dataset.price) - Number(b.dataset.price);
+            if (sort.value === "high")
+                return Number(b.dataset.price) - Number(a.dataset.price);
+            if (sort.value === "name")
+                return a.dataset.name.localeCompare(b.dataset.name);
+            return 0;
+        });
+
+        cards.forEach(card => productGrid.appendChild(card));
+        filterProducts();
+    });
+
+    // SHOPPING CART
+    let cart = [];
+
+    function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        const cartCount = document.getElementById("cart-count");
+        const cartTotal = document.getElementById("cart-total");
+
+        cartItems.innerHTML = "";
+
+        let total = 0;
+        let count = 0;
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+        }
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+            count += item.quantity;
+
+            const row = document.createElement("div");
+            row.className = "cart-item";
+
+            const details = document.createElement("div");
+            details.className = "cart-item-details";
+
+            const name = document.createElement("strong");
+            name.textContent = item.name;
+
+            const price = document.createElement("span");
+            price.textContent = "P" + item.price.toFixed(2);
+
+            const controls = document.createElement("div");
+            controls.className = "cart-controls";
+
+            const minus = document.createElement("button");
+            minus.textContent = "−";
+            minus.addEventListener("click", () => changeQuantity(index, -1));
+
+            const quantity = document.createElement("span");
+            quantity.textContent = item.quantity;
+
+            const plus = document.createElement("button");
+            plus.textContent = "+";
+            plus.addEventListener("click", () => changeQuantity(index, 1));
+
+            controls.append(minus, quantity, plus);
+            details.append(name, price, controls);
+
+            const remove = document.createElement("button");
+            remove.className = "remove-item";
+            remove.textContent = "×";
+            remove.setAttribute("aria-label", "Remove " + item.name);
+            remove.addEventListener("click", () => {
+                cart.splice(index, 1);
+                updateCart();
+            });
+
+            row.append(details, remove);
+            cartItems.appendChild(row);
+        });
+
+        cartCount.textContent = count;
+        cartTotal.textContent = "P" + total.toFixed(2);
+    }
+
+    function changeQuantity(index, amount) {
+        cart[index].quantity += amount;
+
+        if (cart[index].quantity <= 0) {
+            cart.splice(index, 1);
+        }
+
+        updateCart();
+    }
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".boutique-product");
+            const name = card.dataset.name;
+            const price = Number(card.dataset.price);
+
+            const existing = cart.find(item => item.name === name);
+
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+
+            updateCart();
+
+            button.textContent = "✓ Added!";
+            setTimeout(() => {
+                button.textContent = "✦ Add to Cart";
+            }, 900);
+        });
+    });
+
+    document.getElementById("clear-cart").addEventListener("click", () => {
+        cart = [];
+        updateCart();
+    });
+
+    // WHATSAPP CHECKOUT
+    document.getElementById("checkout").addEventListener("click", () => {
+        if (cart.length === 0) {
+            alert("Please add a product to your cart first.");
+            return;
+        }
+
+        const phoneNumber = "267XXXXXXXX"; 
+        // Replace with your actual Botswana WhatsApp number.
+
+        let message = "Hello KXTLO BOUTIQUE! I would like to order:\n\n";
+        let total = 0;
+
+        cart.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+
+            message += item.name + " x " + item.quantity +
+                " = P" + subtotal.toFixed(2) + "\n";
+        });
+
+        message += "\nTotal: P" + total.toFixed(2);
+
+        window.open(
+            "https://wa.me/" + phoneNumber +
+            "?text=" + encodeURIComponent(message),
+            "_blank"
+        );
+    });
+
+    updateCart();
+</script>
 
 </body>
 </html>
+
+
+
