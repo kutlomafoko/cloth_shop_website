@@ -11,12 +11,11 @@
 <body>
 
 <header>
-   
-<a href="gallery.html" class="brand">
-    <img src="Luxurious Gold Crown Hanger Boutique Logo.png"
-         alt="Kxtlo Boutique Logo"
-         class="logo">
-</a>
+    <a href="gallery.html" class="brand">
+        <img src="Luxurious Gold Crown Hanger Boutique Logo.png"
+             alt="Kxtlo Boutique Logo"
+             class="logo">
+    </a>
 
     <nav>
         <a href="index.html">Home</a>
@@ -25,48 +24,85 @@
         <a href="collections.html">Collections</a>
         <a href="gallery.html" class="active">Gallery</a>
         <a href="promotions.html">Promotions</a>
-        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="testimonials.html">Testimonials</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
-<section class="gallery-section">
-    <h2>Our Fashion Collection</h2>
-    <p>Discover some of our favourite fashion styles.</p>
+<!-- FASHION GALLERY -->
 
-    <div class="gallery-grid">
+<section class="fashion-gallery">
 
-        <div class="gallery-item">
+    <div class="gallery-intro">
+        <p>KXTLO BOUTIQUE</p>
+
+        <h1>WEAR WHAT VIBES<br>WITH YOUR MOOD.</h1>
+
+        <p>Discover elegant styles for every occasion.</p>
+
+        <h2>NEW COLLECTION</h2>
+        <span>ELEGANCE IS OUR IDENTITY</span>
+    </div>
+
+    <!-- AUTOMATIC SLIDESHOW -->
+
+    <div class="fashion-slideshow">
+
+        <div class="fashion-slide active">
             <img src="images/women-fashion.jpg" alt="Women's Fashion">
-            <h3>Women's Fashion</h3>
+            <h3>LOOK 01</h3>
         </div>
 
-        <div class="gallery-item">
+        <div class="fashion-slide">
             <img src="images/men-fashion.jpg" alt="Men's Fashion">
-            <h3>Men's Fashion</h3>
+            <h3>LOOK 02</h3>
         </div>
 
-        <div class="gallery-item">
+        <div class="fashion-slide">
             <img src="images/formal-wear.jpg" alt="Formal Wear">
-            <h3>Formal Wear</h3>
+            <h3>LOOK 03</h3>
         </div>
 
-        <div class="gallery-item">
+        <div class="fashion-slide">
             <img src="images/elegant-dresses.jpg" alt="Elegant Dresses">
-            <h3>Elegant Dresses</h3>
+            <h3>LOOK 04</h3>
         </div>
 
-        <div class="gallery-item">
+        <div class="fashion-slide">
             <img src="images/casual-wear.jpg" alt="Casual Wear">
-            <h3>Casual Wear</h3>
+            <h3>LOOK 05</h3>
         </div>
 
-        <div class="gallery-item">
+        <div class="fashion-slide">
             <img src="images/fashion-accessories.jpg" alt="Fashion Accessories">
-            <h3>Fashion Accessories</h3>
+            <h3>LOOK 06</h3>
         </div>
 
     </div>
+
+    <!-- SMALL CLOTHING PREVIEWS -->
+
+    <div class="gallery-products">
+
+        <h3>EXPLORE OUR LOOKS</h3>
+
+        <div class="mini-product">
+            <img src="images/women-fashion.jpg" alt="Women's Fashion">
+            <p>Women's Collection</p>
+        </div>
+
+        <div class="mini-product">
+            <img src="images/men-fashion.jpg" alt="Men's Fashion">
+            <p>Men's Collection</p>
+        </div>
+
+        <div class="mini-product">
+            <img src="images/elegant-dresses.jpg" alt="Elegant Dresses">
+            <p>Elegant Dresses</p>
+        </div>
+
+    </div>
+
 </section>
 
 <footer>
@@ -74,8 +110,27 @@
     <p>Elegance Is Our Identity.</p>
 </footer>
 
+<!-- AUTOMATIC SLIDESHOW SCRIPT -->
+
+<script>
+const slides = document.querySelectorAll(".fashion-slide");
+
+let currentSlide = 0;
+
+function showNextSlide() {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add("active");
+}
+
+setInterval(showNextSlide, 4000);
+</script>
+
 </body>
 </html>
+
 
 
 
