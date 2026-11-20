@@ -220,7 +220,7 @@ nav a.active {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    padding: 60px 7%;
+    padding: 40px 7%;
 
     /* Background picture */
     background:
