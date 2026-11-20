@@ -213,18 +213,38 @@ nav a.active {
 
 /* ABOUT PAGE */
 
+
+/* ABOUT PAGE */
+
 .about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
     padding: 60px 7%;
+
+    /* Background picture */
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
 }
 
 .about-section h2 {
     color: #a17a4a;
     margin: 20px 0 10px;
 }
+
+.about-section p {
+    color: white;
+    line-height: 1.8;
+}
+
 
 /* ABOUT PAGE CIRCULAR FLIPPING LOGO */
 
