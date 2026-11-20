@@ -832,7 +832,7 @@ header img.logo {
 /* TESTIMONIAL PAGE */
 
 .testimonials-section {
-    background: #f5eee6;
+    background: #111;
     padding: 65px 5%;
     text-align: center;
     overflow: hidden;
@@ -846,7 +846,7 @@ header img.logo {
 }
 
 .testimonial-heading h2 {
-    color: #111;
+    color: #a17a4a;
     font-size: 32px;
     margin: 15px 0;
 }
