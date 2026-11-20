@@ -628,3 +628,41 @@ header img.logo {
     }
 }
 
+
+/* LUXURY CONTACT PAGE BACKGROUND */
+
+.contact-section {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.70),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+    padding: 50px 30px;
+}
+
+/* Keep contact content visible */
+
+.contact-info,
+.contact-section form {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile adjustment */
+
+@media (max-width: 768px) {
+    .contact-section {
+        background-attachment: scroll;
+        padding: 30px 15px;
+    }
+}
+
+
