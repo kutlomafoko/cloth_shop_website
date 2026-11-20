@@ -211,7 +211,6 @@ nav a.active {
     margin: 10px 0;
 }
 
-/* ABOUT PAGE */
 
 
 /* ABOUT PAGE */
@@ -226,7 +225,7 @@ nav a.active {
     /* Background picture */
     background:
         linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("");
+        url("jpg(1)");
 
     background-size: cover;
     background-position: center;
