@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials | KXTLO BOTIQUE</title>
+    <title>Testimonials | KXTLO BOUTIQUE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,52 +28,166 @@
 
 <section class="testimonials-section">
 
-    <h2>Our Happy Customers</h2>
-    <p class="testimonial-intro">
-        Your satisfaction is our priority.
-        Discover what our customers think about our fashion and service.
-    </p>
+    <div class="testimonial-heading">
+        <span>WHAT OUR CUSTOMERS SAY</span>
+        <h2>Our Happy Customers</h2>
+        <p>Your satisfaction is our priority. Discover what our customers think about KXTLO BOUTIQUE.</p>
+    </div>
 
-    <div class="testimonials-grid">
+    <div class="testimonial-slider">
 
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "I absolutely love the quality and elegance of the clothes.
-                KXTLO BOTIQUE never disappoints!"
-            </p>
-            <h3>Customer 1</h3>
-            <span>Happy Customer</span>
+        <button class="slide-arrow" onclick="changeReview(-1)">
+            &#10094;
+        </button>
+
+        <div class="testimonial-window">
+
+            <div class="testimonial-track" id="testimonialTrack">
+
+                <!-- CUSTOMER 1 -->
+                <div class="testimonial-card">
+
+                    <video class="customer-video"
+                           autoplay muted loop playsinline>
+                        <source src="videos/customer1.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "I absolutely love the quality and elegance
+                        of the clothes. KXTLO BOUTIQUE never disappoints!"
+                    </p>
+
+                    <h3>Customer 1</h3>
+                    <span>Happy Customer</span>
+
+                    <div class="customer-rating">5.0 / 5</div>
+
+                </div>
+
+                <!-- CUSTOMER 2 -->
+                <div class="testimonial-card">
+
+                    <video class="customer-video"
+                           muted loop playsinline>
+                        <source src="videos/customer2.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The outfits are beautiful, stylish and affordable.
+                        I always feel confident wearing them."
+                    </p>
+
+                    <h3>Customer 2</h3>
+                    <span>Happy Customer</span>
+
+                    <div class="customer-rating">5.0 / 5</div>
+
+                </div>
+
+                <!-- CUSTOMER 3 -->
+                <div class="testimonial-card">
+
+                    <video class="customer-video"
+                           muted loop playsinline>
+                        <source src="videos/customer3.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Excellent customer service and beautiful fashion.
+                        I would definitely recommend this boutique!"
+                    </p>
+
+                    <h3>Customer 3</h3>
+                    <span>Happy Customer</span>
+
+                    <div class="customer-rating">5.0 / 5</div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "The outfits are beautiful, stylish and affordable.
-                I always feel confident wearing them."
-            </p>
-            <h3>Customer 2</h3>
-            <span>Happy Customer</span>
-        </div>
-
-        <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>
-                "Excellent customer service and beautiful fashion.
-                I would definitely recommend this boutique!"
-            </p>
-            <h3>Customer 3</h3>
-            <span>Happy Customer</span>
-        </div>
+        <button class="slide-arrow" onclick="changeReview(1)">
+            &#10095;
+        </button>
 
     </div>
+
+    <div class="slider-dots" id="sliderDots">
+        <span class="dot active" onclick="goToReview(0)"></span>
+        <span class="dot" onclick="goToReview(1)"></span>
+        <span class="dot" onclick="goToReview(2)"></span>
+    </div>
+
+    <p class="review-counter" id="reviewCounter">1 of 3 reviews</p>
 
 </section>
 
 <footer>
-    <p>&copy; 2026 KXTLO BOTIQUE. All Rights Reserved.</p>
+    <p>&copy; 2026 KXTLO BOUTIQUE. All Rights Reserved.</p>
 </footer>
+
+<script>
+
+let currentReview = 0;
+
+const track = document.getElementById("testimonialTrack");
+const reviews = document.querySelectorAll(".testimonial-card");
+const dots = document.querySelectorAll(".dot");
+const counter = document.getElementById("reviewCounter");
+
+function showReview(index) {
+
+    currentReview = (index + reviews.length) % reviews.length;
+
+    track.style.transform =
+        `translateX(-${currentReview * 100}%)`;
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentReview);
+    });
+
+    counter.textContent =
+        `${currentReview + 1} of ${reviews.length} reviews`;
+
+    // Play only the video belonging to the current review
+    reviews.forEach((review, i) => {
+
+        const video = review.querySelector("video");
+
+        if (i === currentReview) {
+            video.play().catch(() => {});
+        } else {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+    });
+}
+
+function changeReview(direction) {
+    showReview(currentReview + direction);
+}
+
+function goToReview(index) {
+    showReview(index);
+}
+
+// Automatically move to the next review every 8 seconds
+setInterval(() => {
+    changeReview(1);
+}, 8000);
+
+</script>
 
 </body>
 </html>
+
+
 
