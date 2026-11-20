@@ -416,3 +416,118 @@ header img.logo {
         transform: rotateY(360deg);
     }
 }
+
+/* AUTOMATIC FASHION GALLERY */
+
+.fashion-gallery {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.8fr;
+    gap: 20px;
+    min-height: 520px;
+    padding: 35px 3%;
+    background: #f5eee6;
+    color: #29231d;
+    align-items: center;
+}
+
+.gallery-intro p {
+    color: #a17a4a;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.gallery-intro h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 20px 0;
+}
+
+.gallery-intro h2 {
+    margin-top: 90px;
+    color: #a17a4a;
+    font-size: 22px;
+}
+
+.gallery-intro span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.fashion-slideshow {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+
+.fashion-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.fashion-slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fashion-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.fashion-slide h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #a17a4a;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 15px;
+}
+
+.gallery-products {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.gallery-products h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.mini-product img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.mini-product p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+@media (max-width: 750px) {
+    .fashion-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .fashion-slideshow {
+        height: 400px;
+    }
+
+    .gallery-intro h2 {
+        margin-top: 25px;
+    }
+
+    .gallery-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-products h3 {
+        grid-column: 1 / -1;
+    }
+}
